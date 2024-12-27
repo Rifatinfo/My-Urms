@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.container {
+    width: 300px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+  }
+
+  .moving-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveText 5s linear infinite; 
+  }
+
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }

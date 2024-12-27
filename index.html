@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Urms</title>
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-nunito">
+    <section class="lg:flex lg:justify-center mt-4">
+      <div class="lg:w-[812px] lg:h-[599px] border border-blue-500">
+        <div>
+          <div>
+            <img
+              class="lg:w-[800px] lg:h-[100px]"
+              src="https://urms-online.ulab.edu.bd/images/header.jpg"
+              alt=""
+            />
+          </div>
+          <button
+            class="w-[810px] h-[44px] bg-gradient-to-r from-[#0069b4] via-[#0098dc] to-[#00d1ff] font-nunito text-white font-bold"
+          >
+            login
+          </button>
+        </div>
+
+        <!-- login details  -->
+        <div class="lg:flex lg:justify-center lg:items-center h-[380px]">
+          <div class="space-y-2">
+            <p class="text-center lg:text-lg lg:font-bold">Please login!</p>
+            <div class="lg:flex gap-3">
+              <p class="font-bold">StudentId :</p>
+              <input class="border-black border-2" type="text" />
+            </div>
+            <div class="lg:flex gap-3">
+              <p class="font-bold">Password :</p>
+              <input class="border-black border-2 ml-1" type="text" />
+            </div>
+            <div class="mt-2">
+               <div class="container">
+                <p class="text-center mt-2 moving-text">Please enter login information.</p>
+               </div>
+                <div class="lg:ml-24 mt-7">
+                    <div class="lg:flex lg:justify-center lg:items-center lg:gap-3">
+                        <button class="px-5 py-1 rounded-lg text-white bg-gradient-to-r from-[#0069b4] via-[#0098dc] to-[#00d1ff]">login</button>
+                        <button class="px-5 py-1 rounded-lg text-white bg-gradient-to-r from-[#0069b4] via-[#0098dc] to-[#00d1ff] hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500">close</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="border  lg:w-[810px] lg:h-[30px] lg:mt-[44px] bg-[#0069b4] lg:flex lg:justify-center lg:items-center">
+            <p class="text-center text-white text-sm">System developed by : <span class="font-semibold">Developer Md Rifat Hossain</span></p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="urms.js"></script>
 </html>
