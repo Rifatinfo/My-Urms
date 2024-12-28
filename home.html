@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-</head>
-<body>
-   <h1>Welcome</h1>
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-nunito bg-[#c5d8f0]">
+    <section class="lg:flex lg:justify-center mt-4 bg-white">
+      <div class="lg:w-[812px] bg-white shadow-lg">
+        <div>
+          <div>
+            <img
+              class="lg:w-[800px] lg:h-[100px]"
+              src="https://urms-online.ulab.edu.bd/images/header.jpg"
+              alt=""
+            />
+          </div>
+          <button
+            class=" w-full lg:w-[810px] lg:h-[44px] bg-gradient-to-r from-[#0069b4] via-[#0098dc] to-[#00d1ff] font-nunito text-white font-bold"
+          >
+            login
+          </button>
+        </div>
+        <!-- Preregistration  -->
+        <div>
+           <div class="text-center">
+            <p class="text-center mt-4 text-xl font-bold">Preregistration</p>
+             <div class="mt-4">
+                <div class="flex gap-3 justify-center">
+                    <p><span class="font-bold">Semester :</span> <span class="font-semibold">251 (Spring 2025)</span></p>
+                    <p><span class="font-bold">Student :</span>  <span class="font-semibold">243014079 (Zara Islam)</span></p>
+                </div>
+                <div class="flex gap-3 justify-center">
+                    <p><span class="font-bold">Adviser : </span> <span class="font-semibold">Mr. Md. Nazmul Abdal</span> </p>
+                    <p><span class="font-bold">Email :</span>    <span class="font-semibold">nazmul.abdal@ulab.edu.bd</span></p>
+                </div>
+             </div>
+           </div>
+        </div>
+        <div class="mt-4 mb-1">
+            <hr>
+        </div>
+          <div class="mt-7">
+              <div class="lg:flex lg:gap-3 lg:justify-center">
+                <label class="swap swap-rotate inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="hidden peer" />
+                    <!-- Swap On (Visible when checked) -->
+                    <div class="swap-on hidden peer-checked:block">
+                        <img class="w-4 h-4" src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png" alt="Checked">
+                    </div>
+                    <!-- Swap Off (Visible when not checked) -->
+                    <div class="swap-off block peer-checked:hidden">
+                        <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Unchecked">
+                    </div>
+                    </label>
+                <p class="font-bold text-lg">Pre-advising Complete </p>
+              </div>
+
+              <div class="text-center mt-5">
+                <p><span class="font-bold">Maximum credit limit</span> <span class="font-semibold"> : 13.0</span></p>
+                <p><span class="font-bold">Total taken courses</span>  <span class="font-semibold">: 3</span></p>
+                <p><span class="font-bold">Total used credit</span>    <span class="font-semibold">: 9.0</span></p>
+              </div>
+
+              <div class="mt-3">
+                <p class="text-center hover:underline hover:text-blue-500">See Co-curricular Courses</p>
+              </div>
+
+
+          </div>
+
+          <!-- subject table -->
+        <div>
+            <div id="main-container" class="p-4">
+                <div id="table-container" class="overflow-x-auto">
+                  <table class="table-auto border-collapse border border-gray-300 w-full text-left text-sm ">
+                    <thead class="bg-[#0099cc]">
+                      <tr class="text-sm text-white">
+                        <th class="border font-semibold border-gray-300 px-4 py-1 text-center">Course ID</th>
+                        <th class="border font-semibold border-gray-300 px-4 py-1 text-center">Course Name</th>
+                        <th class="border font-semibold border-gray-300 px-2 py-1 text-center w-20">Credits</th>
+                        <th class="border font-semibold border-gray-300 px-2 py-1 text-center w-20">Mandatory?</th>
+                        <th class="border font-semibold border-gray-300 px-2 py-1 text-center w-20">Taken</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body">
+                      <!-- Rows will be appended here dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-center font-semibold">Co-curricular Courses: </p>
+        </div>
+         
+        <!-- Co-curricular table -->
+        <div>
+            <div id="main-container" class="p-4">
+                <div id="table-container" class="overflow-x-auto">
+                  <table class="table-auto border-collapse border border-gray-300 w-full text-left text-sm text-white">
+                    <thead class="bg-[#0099cc]">
+                      <tr class="text-sm">
+                        <th class="border font-semibold border-gray-300 px-4 py-1 text-center">Course ID</th>
+                        <th class="border font-semibold border-gray-300 px-4 py-1 text-center">Course Name</th>
+                        <th class="border font-semibold border-gray-300 px-2 py-1 text-center w-20">Credits</th>
+                        <th class="border font-semibold border-gray-300 px-2 py-1 text-center w-20">Mandatory?</th>
+                        <th class="border font-semibold border-gray-300 px-2 py-1 text-center w-20">Taken</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body-Co-curricular">
+                      <!-- Rows will be appended here dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="mt-6">
+            <p class="text-gray-400 text-center">Click here to add retake courses</p>
+        </div>
+        <div class="border  lg:w-[810px] lg:h-[30px] lg:mt-[44px] bg-[#89c4eefa] lg:flex lg:justify-center lg:items-center">
+            <p class="text-center text-black text-[10px] lg:text-sm">System developed by : <span class="font-semibold">Developer Md Rifat Hossain</span></p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="urms.js"></script>
+  <script src="table.js"></script>
 </html>
