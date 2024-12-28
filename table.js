@@ -34,9 +34,22 @@ const displayData = (data) => {
   };
   
 
-const table = () => {
-   
+const loadCategory = async () => {
+   const res = await fetch('category.json');
+   const data = await res.json();
+   displayCategory(data.routes); 
 }
 
-table();
+const displayCategory = (data) =>{
+   const routingContainer = document.getElementById("routing-container");
+   data.forEach(route => {
+     const div = document.createElement('div');
+     div.innerHTML = `
+      <button class="text-white hover:text-[#FFE993] hover:scale-110">${route.component}</button>
+     `
+     routingContainer.appendChild(div);
+   })
+}
+
 dataLoad();
+loadCategory();
